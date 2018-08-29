@@ -13,8 +13,8 @@ function ShoppingItem(props) {
 
         <div>
           <span onClick = {() => props.editButton()}> EDIT  </span>
-          <span>  X REMOVE </span>
-          <span> SAVE FOR LATER </span>
+          <span onClick = {() => props.deleteButton()}>  X REMOVE </span>
+          <span onClick = {() => props.saveButton()}> SAVE FOR LATER </span>
         </div>
 
       </div>

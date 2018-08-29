@@ -4,7 +4,8 @@ import ShoppingItem from './ShoppingItem'
 function ShoppingCart(props) {
   console.log(props)
 
-  const list = props.clothing.map(clothingthings => <ShoppingItem {...clothingthings} editButton = {props.editButton}/>)
+  const list = props.clothing.map(clothingthings => <ShoppingItem {...clothingthings} editButton = {props.editButton}
+   deleteButton = {props.deleteButton} saveButton = {props.saveButton} />)
   console.log(list)
     return(
     <section>
