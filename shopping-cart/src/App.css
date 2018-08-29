@@ -13,8 +13,40 @@
 
 .purchase {
    width: 30%;
+   display: flex;
+   justify-content: flex-end;
 }
 
 img {
   width: 100%
+}
+
+.size{
+  width: 20%;
+}
+
+.qty {
+  width: 40%;
+  margin-left: auto;
+}
+
+.price{
+  margin-left: auto;
+}
+
+.itemplacement{
+
+}
+
+.sizeplacement {
+  width: 20%;
+}
+
+.qtyplacement {
+  width: 40%;
+  margin-left: auto;
+}
+
+.priceplacement {
+   margin-left: auto;
 }
