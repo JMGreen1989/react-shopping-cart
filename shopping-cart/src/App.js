@@ -3,13 +3,20 @@ import './App.css';
 import Checkout from "./components/Checkout";
 import ShoppingCart from "./components/ShoppingCart";
 import ShoppingItem from "./components/ShoppingItem"
+import PopUp from "./components/PopUp"
 
 class App extends Component {
 
    state ={
+
+    current: {},
+
+    PopUp: false,
+
     clothing: [
 
     {
+      id: 0,
       title: "Shirt",
       color: "Teal",
       style: "Polo",
@@ -20,6 +27,7 @@ class App extends Component {
     },
 
     {
+      id: 1,
       title: "Pants",
       color: "Blue",
       style: "Jeans",
@@ -30,6 +38,7 @@ class App extends Component {
     },
 
     {
+      id: 2,
       title: "Jacket",
       color: "Brown",
       style: "Bomber",
@@ -42,15 +51,54 @@ class App extends Component {
     ]
   };
 
-   editButton = () => {console.log("edittest")}
-   deleteButton = () => {console.log("deletetest")}
-   saveButton  = () => {console.log("savetest")}
+   editButton = (props) => {
+    this.setState
+
+    ({PopUp: !this.state.PopUp});
+
+
+    !this.state.Popup ? this.setState({
+     current: props
+    }) : (this.state.clothing[props.id] = this.state.current)
+
+     console.log("inside edit",props);
+
+    };
+
+
+   deleteButton = () => {
+
+    console.log("deletetest"
+
+    )};
+
+
+   saveButton  = () => {
+
+    console.log("savetest"
+
+    )};
+
+
+   handleChange = (key, e) =>  {
+
+   // console.log(key, e)
+    this.setState({
+
+        current: {
+          ...this.state.current,
+          [key]: e.target.value}
+
+  })};
+
 
   render() {
     return (
-      <div>test
+      <div>
       <ShoppingCart clothing = {this.state.clothing} editButton={this.editButton} deleteButton={this.deleteButton} saveButton={this.saveButton}/>
+      <PopUp PopUp = {this.state.PopUp} editButton={this.editButton} current={this.state.current} handleChange={this.handleChange}  />
       </div>
+
     );
   }
 }

@@ -5,15 +5,20 @@ function ShoppingCart(props) {
   console.log(props)
 
   const list = props.clothing.map(clothingthings => <ShoppingItem {...clothingthings} editButton = {props.editButton}
+
    deleteButton = {props.deleteButton} saveButton = {props.saveButton} />)
-  console.log(list)
+    console.log(list)
     return(
+
     <section>
-      <div>
-        <span className= "itemplacement">Items</span>
-        <span className= "sizeplacement"> Size </span>
-        <span className= "qtyplacement"> Qty </span>
-        <span className= "priceplacement"> Price </span>
+      <div className = "itemwords">
+        <div className= "itemplacement">Items </div>
+
+        <div className="itemwordz">
+          <div className= "sizeplacement"> Size  </div>
+          <div className= "qtyplacement"> Qty  </div>
+          <div className= "priceplacement"> Price  </div>
+        </div>
       </div>
 
      {list}

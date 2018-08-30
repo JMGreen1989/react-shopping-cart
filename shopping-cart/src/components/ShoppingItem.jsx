@@ -7,14 +7,14 @@ function ShoppingItem(props) {
     <section className="Items">
       <div className="image"><img src={props.image}/></div>
         <div className="info">
-           <p> Item {props.title}</p>
-           <p> Style {props.style}</p>
-           <p> Color {props.color}</p>
+           <p> Item: {props.title}</p>
+           <p> Style: {props.style}</p>
+           <p> Color: {props.color}</p>
 
         <div>
-          <span onClick = {() => props.editButton()}> EDIT  </span>
-          <span onClick = {() => props.deleteButton()}>  X REMOVE </span>
-          <span onClick = {() => props.saveButton()}> SAVE FOR LATER </span>
+          <span onClick = {() => props.editButton(props)}> | EDIT |  </span>
+          <span onClick = {() => props.deleteButton()}>  | REMOVE |  </span>
+          <span onClick = {() => props.saveButton()}> | SAVE FOR LATER |  </span>
         </div>
 
       </div>
