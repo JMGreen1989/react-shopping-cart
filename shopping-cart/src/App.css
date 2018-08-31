@@ -1,9 +1,11 @@
- *{
+/* *{
   border: 1px solid black;
- }
+ }*/
+
  .Items {
   display: flex;
   justify-content: space-evenly;
+  margin: bottom;
 }
 
 .image{
@@ -73,6 +75,7 @@ img {
 
 .itemplacement {
  width: 60%;
+ font-size: 20px;
 
 }
 
@@ -82,10 +85,42 @@ img {
 
 .itemwords {
   display: flex;
+
 }
 
 .itemwordz {
   width: 40%;
   display: flex;
 
+}
+
+.checkoutbox {
+  backgroung-color: green;
+  height: 60%;
+  width: 60%;
+
+}
+
+
+.checkout {
+  display: flex;
+}
+
+.sizeplacement {
+ text-align: center;
+}
+
+.qtyplacement {
+  position: relative;
+  right: 140px;
+}
+
+.priceplacement {
+  position: relative;
+  right: 80px;
+}
+
+.clickhere {
+  font-size: 15px;
+  color: blue;
 }

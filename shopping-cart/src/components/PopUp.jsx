@@ -28,8 +28,8 @@ class PopUp extends React.Component {
             <div className="image">Image{<img src = {image}/>}</div>
          </div>
 
-          <div onClick = {() => this.props.editButton(this.props.current)} className = "otherbutton">
-            edit
+          <div className = "clickhere" onClick = {() => this.props.editButton(this.props.current)} className = "otherbutton">
+            Click Here
           </div>
         </div>
       </div>

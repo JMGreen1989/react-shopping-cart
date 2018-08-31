@@ -9,6 +9,7 @@ function ShoppingCart(props) {
    deleteButton = {props.deleteButton}
    saveButton = {props.saveButton} />)
     console.log(list)
+
     return(
 
     <section>
