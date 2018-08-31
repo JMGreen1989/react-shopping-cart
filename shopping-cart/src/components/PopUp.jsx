@@ -21,10 +21,10 @@ class PopUp extends React.Component {
         <div className = "smallerbox">
 
          <div>
-            <div className="size"><input type="text" value ={size}/></div>
-            <div className="Qty"><input type="text" value ={qty}/></div>
+            <div className="size"><input type="text" value ={size} onChange= {(e)=> {this.props.handleChange("size", e)}}/></div>
+            <div className="Qty"><input type="text" value ={qty} onChange= {(e)=> {this.props.handleChange("qty", e)}}/></div>
             <div className="price"><input type="text" value ={price} onChange= {(e)=> {this.props.handleChange("price", e)}}/></div>
-            <div className="color"><input type="text" value ={color}/></div>
+            <div className="color"><input type="text" value ={color} onChange= {(e)=> {this.props.handleChange("color", e)}}/></div>
             <div className="image">Image{<img src = {image}/>}</div>
          </div>
 

@@ -52,32 +52,37 @@ class App extends Component {
   };
 
    editButton = (props) => {
-    this.setState
+    this.setState({PopUp: !this.state.PopUp});
+    !this.state.PopUp ? this.setState({current: props}) :
 
-    ({PopUp: !this.state.PopUp});
+    this.setState({
+    clothing: this.saveCurrent(this.state.clothing, this.state.current)
+     })
+
+     console.log(this.state)
+    };
 
 
-    !this.state.Popup ? this.setState({
-     current: props
-    }) : (this.state.clothing[props.id] = this.state.current)
+   deleteButton = (props) => {
+    this.setState({delete: props}, () => {
+    const newClothing = [...this.state.clothing]
+    const filterClothing = newClothing.filter(
+    (id) => id.id !== props.id )
+    console.log(props.id, "props baby")
+    console.log(filterClothing, "text or something")
 
-     console.log("inside edit",props);
+    this.setState({
+    clothing: filterClothing
+    })
+    });
 
     };
 
 
-   deleteButton = () => {
-
-    console.log("deletetest"
-
-    )};
-
-
    saveButton  = () => {
 
-    console.log("savetest"
 
-    )};
+    };
 
 
    handleChange = (key, e) =>  {
@@ -92,7 +97,17 @@ class App extends Component {
   })};
 
 
+  saveCurrent = (arr, current ) => {
+    const newArr = [...arr]
+    newArr[current.id] = current
+    // console.log(newArr, "LOOK HERE")
+    return newArr
+  };
+
+
+
   render() {
+    // console.log(this.state, "here's the state")
     return (
       <div>
       <ShoppingCart clothing = {this.state.clothing} editButton={this.editButton} deleteButton={this.deleteButton} saveButton={this.saveButton}/>
